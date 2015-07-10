@@ -1,0 +1,100 @@
+/* Comments */
+#comments {
+    margin: 30px;
+    padding: 20px;
+    background: #fff;
+}
+#comments li {
+  list-style: none;
+}
+#comments li.comment-list-box {
+  padding: 10px 0 20px 55px;
+  margin: 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+#comments li.comment-list-box .comment-author img {
+  position: absolute;
+  left: 0;
+  float: left;
+  margin: 0px 10px 5px 0px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+}
+
+#comments li.comment-list-box a.comment-reply-link {
+  border: 1px solid #dddddd;
+  padding: 5px 13px;
+  color: #888888;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+}
+#comments li.comment-list-box a.comment-reply-link:hover {
+  background: #eeeeee;
+  color: #888888;
+  text-decoration: none;
+}
+#comments ul.children {
+  padding: 0;
+  margin: 0;
+}
+#comments ul.children li {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#comments p {
+  line-height: 1.48;
+  margin: 10px 0;
+}
+#comments input[type="text"] {
+  width: 30%;
+}
+#comments .comment-meta {
+  font-size: 13px;
+  line-height: 28px;
+  color: #999999;
+}
+.comment-list {
+  margin: 10px 0 40px 0;
+  padding: 0;
+}
+input[type="submit"] {
+    padding: 7px 12px;
+    border: 1px solid #888;
+    background: #FFF;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:focus, input[type="submit"]:hover {
+    background: #666;
+    color: #FFF;
+}
+input[type="text"] {
+    outline: none;
+    padding: 7px 5px;
+    border-radius: 3px;
+    border: 1px solid #EEE;
+    font-size: 15px;
+}
+input[type="text"]:focus {
+    border-color: #A5CFE7;
+    -webkit-transition: border-color 0.2s ease-in;
+}
+textarea {
+    width: 95%;
+    min-height: 160px;
+    border: 1px solid #EEE;
+    border-radius: 3px;
+    padding: 8px;
+    outline: 0;
+    font-size: 15px;
+}
+textarea:focus {
+    border-color: #A5CFE7;
+    -webkit-transition: border-color 0.2s ease-in;
+}

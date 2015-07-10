@@ -1,0 +1,330 @@
+/*
+Theme Name: TCC-Department
+Theme URI:
+Description: 這是一個要用來當高雄應用科技大學資訊工程系系網的主題，第一次做，還望多指教。
+Author: TCC
+Author URI: 203.64.91.82/Blog
+Version: 0.5
+Tags: education
+License:
+License URI:
+Text Domain:tcc
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,#navigation div, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup,#navigation div, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    color: #22A2EB;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    margin-left: 25px;
+}
+li {
+    /*list-style: square;*/
+    margin: 5px 0;
+    color: #555;
+}
+h1 {
+    font-size: 32px;
+    color: #555;
+    line-height: 1.8;
+    font-weight: 300;
+}
+h2 {
+    font-size: 26px;
+    line-height: 1.48;
+}
+h3 {
+    font-size: 20px;
+    line-height: 1.48;
+    color: #777;
+}
+.hide {
+    display: none;
+}
+
+/* Main */
+body {
+    background: #FAFAFA;
+    font-family: "verdana", "Times New Roman", "新細明體", "微軟正黑體";
+    /*font-family: "Open Sans", sans-serif;*/
+    /*background: url(images/background.jpg) repeat left 3px;*/
+}
+.container {
+    width: 1000px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 50px #000;
+    margin: 0 auto 50px;
+    padding: 0 10px;
+}
+.header {
+    width: 100%;
+    text-align: center;
+}
+.header-link {/*..........................*/
+    position: relative;
+    float: right;
+    display: block;
+    top: -30px;
+    background: #101010;
+    margin: 0 5px;
+    padding: 0 10px;
+    border-radius: 0 0 5px 5px;
+    /*right: 30px;*/
+}
+.header-link a{
+    color: white;
+}
+.title {
+    margin: 30px 0 10px;
+    padding: 0 0;
+}
+/*.title img{
+    margin: -30px 0;
+    display: block;
+    float: left;
+    height: 140px;
+    width: auto;
+}*/
+.title a {
+    margin: 30px 0;
+    font-size: 30px;
+    color: #666;
+    text-decoration: none;
+}
+
+/* Main Column */
+.content {
+    padding: 0 0 32px 0; /* 底部高度 */
+    float: left;
+    width: 100%;
+    margin: 10px 0 0;
+}
+.article {
+    width: 80%;
+    float: left;
+}
+.sidebar {
+    width: 20%;
+    float: left;
+}
+.sidebar h1 {
+    font: 'Trebuchet MS', Trebuchet, SimSun, sans-serif;
+    font-weight: bold;
+}
+.sidebar ul {
+    font: normal normal 15px 'Trebuchet MS', Trebuchet, SimSun, sans-serif;
+    font-weight: bold;
+    list-style: square;
+}
+/* Flexslider_box */
+.flexslider_box {
+    margin: 0 200px;
+}
+/* Sidebar */
+.sidebar-right {
+    margin: 0;
+    padding: 5px 5px;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    line-height: 1.8;
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Posts */
+.article-content {
+    margin: 30px;
+    padding: 20px;
+    background: #FFF;
+}
+.article-content p {
+    font: 15px/1.7 "Open Sans", sans-serif;
+    color: #565656;
+    margin: 15px 0;
+}
+.article-content div { /*子頁面*/
+    /*font: 15px/1.7 "Open Sans", sans-serif;*/
+    font-family:   "微軟正黑體","新細明體","verdana", "Times New Roman";
+
+    color: #565656;
+    margin: 15px 10px;
+}
+.article-title {
+    font-size: 32px;
+    color: #555;
+    line-height: 1.8;
+    font-weight: 300;
+}
+.article-meta span {
+    color: #888;
+    font-size: 13px;
+    margin-right: 7px;
+}
+.article-meta span a{
+    color: #888;
+    text-decoration: none;
+}
+.article-meta span a:hover {
+    text-decoration: underline;
+}
+.clearfix {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.more-link {
+    float: right;
+    color: #666;
+    padding: 7px 10px;
+    background: #EFEFEF;
+    text-decoration: none;
+}
+.more-link:hover {
+    background: #888;
+    color: #FFF;
+}
+
+/* PageNavi */
+.wp-pagenavi {
+    /*margin: 30px;*/
+    padding: 20px 0;
+    background: #FFF;
+}
+.pages {
+    color: #888;
+    margin-right: 13px;
+}
+.page-numbers {
+    padding: 5px 10px;
+    color: #FFF;
+    background: #888;
+    text-decoration: none;
+}
+.page-numbers:hover {
+    color: #FFF;
+    background: #666;
+}
+.page-numbers.current {
+    color: #FFF;
+    background: #666;
+}
+
+/* Footer */
+.footer {
+    /*舊版margin: 0px 30px 15px 30px;
+    float: left;
+    padding: 20px;*/
+    font-size: 13px;
+    border-top: 1px solid #D0D0D0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    width: 100%;
+    line-height: 32px;
+    padding: 0 5px 0 5px;
+    margin: 20px 0 0 0;
+    background: #23282d;
+}
+.footer div {
+    padding: 0 10pt;
+    float: left;
+    color :#FFFFFF;
+}
+.copyright {
+    color: #888;
+    font-size: 13px;
+}
+.copyright:hover {
+    background: #555;
+}
+.copyright:hover a{
+    color :#FFF;
+}
+.copyright a {
+    color: #666;
+    text-decoration: none;
+}
+.copyright a:hover {
+    color: #CCC;
+    text-decoration: underline;
+}
+
+
+
+
+/* Breadcrumb */
+.breadcrumb {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    background: transparent;
+    font-size: 13px;
+    color: #999999;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.breadcrumb li {
+    margin: 0;
+    display: inline-block;
+    text-shadow: 0 1px 0 white;
+}
+
+.breadcrumb i {
+    vertical-align: middle;
+    opacity: 0.5;
+    margin: 0px 4px 0 0;
+}
+
+.breadcrumb a {
+    color: #999999;
+}
+
+.breadcrumb .divider {
+    padding: 0 5px;
+    color: #cccccc;
+}
+
+.tagcloud a {
+    font: 20px;
+}
