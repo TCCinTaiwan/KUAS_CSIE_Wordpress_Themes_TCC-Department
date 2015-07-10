@@ -205,3 +205,26 @@ class Redirect {
         update_post_meta($post_id, '_redirect_target', $redirect_target);
     }
 }
+
+
+add_filter('manage_posts_columns', 'columns');
+add_filter('manage_pages_columns', 'columns');
+add_action('manage_posts_custom_column', 'custom_columns', 5, 2);
+add_action('manage_pages_custom_column', 'custom_columns', 5, 2);
+
+function columns($columns) {
+    return array_merge(
+        $columns, 
+        array(
+            'expiration' => __('Expiration', 'tcc'),
+            'redirect' => __('Redirect', 'tcc')
+        )
+    );
+}
+function custom_columns($column, $post_id) {
+    if ($column === 'expiration') {
+        echo get_post_meta($post_id, '_expiration', true);
+    } else if ($column === 'redirect') {
+        echo get_post_meta($post_id, '_redirect', true);
+    }
+}

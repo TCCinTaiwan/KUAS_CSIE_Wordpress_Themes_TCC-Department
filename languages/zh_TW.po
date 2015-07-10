@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tcc\n"
-"POT-Creation-Date: 2015-07-10 13:34+0800\n"
-"PO-Revision-Date: 2015-07-10 17:02+0800\n"
+"POT-Creation-Date: 2015-07-10 22:55+0800\n"
+"PO-Revision-Date: 2015-07-10 22:56+0800\n"
 "Last-Translator: TCC <john987john987@yahoo.com.tw>\n"
 "Language-Team: john987john987@gmail.com\n"
 "Language: zh_TW\n"
@@ -35,7 +35,8 @@ msgstr "回首頁"
 msgid "Search by Category"
 msgstr "以分類搜尋"
 
-#: archives.php:9 search.php:9 single.php:8
+#: archives.php:9 archives.php:10 search.php:9 search.php:10 single.php:8
+#: single.php:9
 msgid "Y/n/j"
 msgstr "Y年n月j日"
 
@@ -43,7 +44,7 @@ msgstr "Y年n月j日"
 msgid "last Update:"
 msgstr "最後更新："
 
-#: function_message.php:37
+#: function_message.php:48
 msgid "Y/m/d"
 msgstr "Y年m月d日"
 
@@ -61,7 +62,7 @@ msgstr "輸入的文章或網頁的到期時間。"
 
 #: function_meta_boxes.php:133
 msgid "redirect"
-msgstr "重定址"
+msgstr "重導向"
 
 #: function_meta_boxes.php:155
 msgid "Enter the redirect URL of the post or page."
@@ -70,6 +71,14 @@ msgstr "輸入文章或網頁的重定址位址。"
 #: function_meta_boxes.php:161
 msgid "Enter the redirect target of the post or page."
 msgstr "輸入文章或網頁的重定址目標。"
+
+#: function_meta_boxes.php:219
+msgid "Expiration"
+msgstr "到期"
+
+#: function_meta_boxes.php:220
+msgid "Redirect"
+msgstr "重導向"
 
 #: function_theme_customiser.php:10
 msgid "Marquee Text Color"
@@ -121,11 +130,11 @@ msgstr "顯示在網頁右方。"
 msgid "marquee"
 msgstr "跑馬燈"
 
-#: search.php:19
+#: search.php:20
 msgid "Search Results"
 msgstr "搜尋結果"
 
-#: search.php:20
+#: search.php:21
 msgid ""
 "Sorry, I can not find the article you are searching for, you can try other "
 "keywords to find again."
@@ -139,7 +148,7 @@ msgstr "搜尋..."
 msgid "Search"
 msgstr "搜尋"
 
-#: single.php:13
+#: single.php:14
 msgid "Expiration date:"
 msgstr "到期時間："
 

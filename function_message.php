@@ -1,7 +1,7 @@
 <?
 /* 顯示公告 */
 function tcc_message_table() {
-    global $cat, $tag, $post;// $wp_query,
+    global $cat, $tag, $post;
     echo '<div class="MessageTable"><table class="tablesorter">';
     //echo '<thead><tr><th>' . __('Title','tcc') . '</th><th>' . __('Date','tcc') . '</th><th>' . __('Type','tcc') . '</th></tr> </thead>';
     echo '<tbody>';
