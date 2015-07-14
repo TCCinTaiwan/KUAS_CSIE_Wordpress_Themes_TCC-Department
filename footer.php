@@ -15,7 +15,7 @@
         </div>
         <?//頁尾資訊
         $options = ThemeOptions::getOptions();
-        foreach ($options['footer'][substr(get_locale(), 0, 2)] as $key => $value) {
+        foreach ($options[get_locale()]['footer'] as $key => $value) {
             echo '<div>'.$value.'</div>';
         }
         ?>

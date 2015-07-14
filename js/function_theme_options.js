@@ -9,4 +9,3 @@ jQuery(document).ready(function() {
         jQuery("#marquee_list > br:last").after("<input type='text' name='marquee[]' /><input type='text' name='marquee_en[]' /><br />");
     });
     //可改進成末項 != "" ，就新増欄位
-});

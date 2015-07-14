@@ -44,7 +44,7 @@
     <div class="container">
         <header class="header">
             <ul class='header-link'><? pll_the_languages(array('show_flags' => 1, 'hide_current' => 1));?></ul>
-            <ul class='header-link'><li><a href="http://www.kuas.edu.tw/"><img src="<? bloginfo('template_directory');?>/icon/KUAS.ico" width="16">&nbsp;高應大</a></li></ul>
+            <ul class='header-link'><li><a href="<?_e('http://eng.kuas.edu.tw/', 'tcc');?>"><img src="<? bloginfo('template_directory');?>/icon/KUAS.ico" width="16"><?_e(' KUAS', 'tcc');?></a></li></ul>
             <!-- .................... -->
             <div class="title">
                 <a href="<? bloginfo('url');?>">
@@ -68,7 +68,7 @@
             <section>
                 <h2 class='hide'><?_e('marquee');?></h2>
                 <ul id="marquee" class="marquee">
-                    <?foreach ($options['marquee'][substr(get_locale(), 0, 2)] as $key => $value) {
+                    <?foreach ($options[get_locale()]['marquee'] as $key => $value) {
                         echo '<li>'.$value.'</li>';
                     }?>
                 </ul>

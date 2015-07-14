@@ -4,7 +4,7 @@ Theme URI:
 Description: 這是一個要用來當高雄應用科技大學資訊工程系系網的主題，第一次做，還望多指教。
 Author: TCC
 Author URI: 203.64.91.82/Blog
-Version: 0.5
+Version: 0.7
 Tags: education
 License:
 License URI:
@@ -153,7 +153,7 @@ body {
 }
 /* Flexslider_box */
 .flexslider_box {
-    margin: 0 200px;
+    margin: 0 50px;
 }
 /* Sidebar */
 .sidebar-right {

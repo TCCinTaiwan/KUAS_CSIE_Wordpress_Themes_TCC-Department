@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tcc\n"
-"POT-Creation-Date: 2015-07-10 22:55+0800\n"
-"PO-Revision-Date: 2015-07-10 22:56+0800\n"
+"POT-Creation-Date: 2015-07-13 16:27+0800\n"
+"PO-Revision-Date: 2015-07-13 16:28+0800\n"
 "Last-Translator: TCC <john987john987@yahoo.com.tw>\n"
-"Language-Team: john987john987@gmail.com\n"
+"Language-Team: TCC <john987john987@gmail.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,47 +84,65 @@ msgstr "重導向"
 msgid "Marquee Text Color"
 msgstr "跑馬燈文字顏色"
 
-#: function_theme_options.php:84
+#: function_theme_options.php:46 function_theme_options.php:66
 msgid "Theme Options"
 msgstr "主題選項"
 
-#: function_theme_options.php:85
+#: function_theme_options.php:47
 msgid "FlexSlider Options"
 msgstr "FlexSlider選項"
 
-#: function_theme_options.php:86
+#: function_theme_options.php:48
 msgid "Marquee"
 msgstr "跑馬燈"
 
-#: function_theme_options.php:99 function_theme_options.php:135
-#: function_theme_options.php:167
+#: function_theme_options.php:61
 msgid "You do not have sufficient permissions to access this page."
 msgstr "您沒有足夠的權限來訪問此頁面。"
 
-#: function_theme_options.php:119 function_theme_options.php:158
-#: function_theme_options.php:184
-msgid "Save Settings"
-msgstr "儲存設定"
+#: function_theme_options.php:68
+msgid "Footer Info:"
+msgstr "頁尾資訊："
 
-#: function_theme_options.php:141
-msgid "Setting the FlexSlider images"
-msgstr "設置FlexSlider圖片"
+#: function_theme_options.php:73
+msgid "Setting the FlexSlider contents"
+msgstr "設定FlexSlider內容。"
 
-#: function_theme_options.php:173
+#: function_theme_options.php:75
+msgid "FlexSlider Contents:"
+msgstr "FlexSlider內容："
+
+#: function_theme_options.php:80
 msgid "Setting the marquee message"
 msgstr "設置跑馬燈訊息"
 
-#: functions.php:28
+#: function_theme_options.php:82
+msgid "Marquee Message:"
+msgstr "跑馬燈訊息："
+
+#: function_theme_options.php:111
+msgid "Save Settings"
+msgstr "儲存設定"
+
+#: functions.php:23
 msgid "Primary Header Navigation"
 msgstr "主標題導航"
 
-#: functions.php:39
+#: functions.php:32
 msgid "Right sidebar"
 msgstr "右側邊欄"
 
-#: functions.php:41
+#: functions.php:34
 msgid "It appears to the right of the page."
 msgstr "顯示在網頁右方。"
+
+#: header.php:47
+msgid "http://eng.kuas.edu.tw/"
+msgstr "http://www.kuas.edu.tw/"
+
+#: header.php:47
+msgid " KUAS"
+msgstr " 高應大"
 
 #: header.php:69
 msgid "marquee"
@@ -151,6 +169,12 @@ msgstr "搜尋"
 #: single.php:14
 msgid "Expiration date:"
 msgstr "到期時間："
+
+#~ msgid "Setting the FlexSlider images"
+#~ msgstr "設置FlexSlider圖片"
+
+#~ msgid "FlexSlider Images:"
+#~ msgstr "FlexSlider圖片："
 
 #~ msgid "URL"
 #~ msgstr "網址"

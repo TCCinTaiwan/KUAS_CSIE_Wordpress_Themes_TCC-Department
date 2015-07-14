@@ -3,11 +3,7 @@
 @ini_set("post_max_size", "200M");   //表單傳輸的最大值(通常比upload_max_size大)
 @ini_set("max_execution_time", "300");   //Script執行時間上限(單位：秒)
 date_default_timezone_set('Asia/Taipei'); 
-include_once('function_theme_options.php'); //主題選單
-include_once('function_theme_customiser.php'); //主題自訂風格
-include_once('function_meta_boxes.php'); //主題文章相關參數
-include_once('function_plugin.php'); //插件
-include_once('function_message.php'); //訊息
+load_theme_textdomain('tcc', get_template_directory() . '/languages');/*多國語言支持*/
 
 
 /*移除不必要meta資訊*/
@@ -18,7 +14,6 @@ remove_action( 'wp_head', 'rsd_link' ) ;
 /*停用 WordPress 迴響的 HTML 功能*/
 add_filter( 'pre_comment_content', 'wp_specialchars' );
 
-load_theme_textdomain('tcc', get_template_directory() . '/languages');/*多國語言支持*/
 function theme_setup() {
     load_theme_textdomain('tcc', get_template_directory() . '/languages');/*多國語言支持*/
     add_theme_support('post-thumbnails');//使用文章特色圖片
@@ -28,8 +23,6 @@ function theme_setup() {
     register_nav_menu('primary', __('Primary Header Navigation', 'tcc'));
 }
 add_action('after_setup_theme', 'theme_setup');
-
-
 
 
 // add_theme_support('post-formats', array('aside', 'gallery'));// 使用文章格式
@@ -46,24 +39,27 @@ if (function_exists('register_sidebar') ) {
     ));
 }
 
-function tcc_flexslider() {
-    echo '<div class="flexslider_box"><div class="flexslider"><ul class="slides">';
-    $options = ThemeOptions::getOptions(); //載入主題設定值
-    $lang = substr(get_locale(), 0, 2);
-    if (count($options['flex'][$lang]) > 0 ) {
-        foreach ($options['flex'][$lang] as $key => $value) {
-            echo '<li><img src="' . $value . '"/></li>';
+
+
+/* 禁止非中文用戶訪問登入頁面開始（由AREFLY.COM製作） */
+function login_page_disallow_non_chinese_user(){
+    if(in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'))){    // If is login page
+        if(substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5) != 'zh-TW'){
+            wp_die("對不起，您無法登入本站！請聯系本站管理員處理！");
         }
     }
-    else 
-    {
-        // 預設圖片牆
-        for ($i = 1; $i <= 4; $i ++) {
-            echo '<li><img src="http://203.64.91.82/KUAS_CSIE/wordpress_1/wp-content/themes/tcc/images/image' . $i . '.jpg"/></li>';
-        }
-    }
-    echo '</ul></div></div>';
 }
+add_action('init', 'login_page_disallow_non_chinese_user');
+/* 禁止非中文用戶訪問登入頁面結束（由AREFLY.COM製作） */
+
+include_once('function_theme_options.php'); //主題選單
+include_once('function_theme_customiser.php'); //主題自訂風格
+include_once('function_meta_boxes.php'); //主題文章相關參數
+include_once('function_plugin.php'); //插件
+include_once('function_message.php'); //訊息
+include_once('function_flexslider.php'); //訊息
+
+
 /* 留言HTML */
 // add_filter( 'pre_comment_content', 'wp_specialchars' );
 // register_nav_menus( array(
@@ -88,4 +84,3 @@ function tcc_flexslider() {
 //     comment_reply_link(array_merge( $args,array('depth' => $depth, 'max_depth' =>$args['max_depth'])));
 // }
 // 
-
