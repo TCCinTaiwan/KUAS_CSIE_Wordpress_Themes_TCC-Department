@@ -3,6 +3,7 @@
 .MessageTable {
     margin: 0 0 10px 0;
     padding: 0px;
+    text-align: center;
     /*width: 100%;*/
 
     /*border: 1px solid #000000;*/
@@ -30,6 +31,21 @@
     margin: 0px;
     padding: 0px;
 }
+.MessageTable tr:first-child td:first-child {
+    -moz-border-radius-topleft: 8px;
+    -webkit-border-top-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.MessageTable tr:first-child td:last-child {
+    -moz-border-radius-topright: 8px;
+    -webkit-border-top-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.MessageTable tr:last-child td:first-child {
+    -moz-border-radius-bottomleft: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
 .MessageTable tr:last-child td:last-child {
     -moz-border-radius-bottomright: 8px;
     -webkit-border-bottom-right-radius: 8px;
@@ -39,11 +55,6 @@
     background-color: #FFFFFF;
 }*/
 
-.MessageTable tr:last-child td:first-child {
-    -moz-border-radius-bottomleft: 8px;
-    -webkit-border-bottom-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
 .MessageTable tr:nth-child(odd) {
     background-color: #ffffff;
     /*background-color: #aad4ff;*/
@@ -58,27 +69,24 @@
 .MessageTable tr:nth-child(even):hover {
     background-color: #cccccc;
 }
-.MessageTable tr *:nth-child(1) {
-    width: 70%;
+.MessageTable tr > td:nth-child(1) {
+    width: 74%;
+    line-height: 20px;
 }
-.MessageTable tr *:nth-child(2) {
-    width: 15%;
+.MessageTable tr > td:nth-child(2) {
+    width: 14%;
     text-align: center;
 }
-.MessageTable tr *:nth-child(3) {
-    width: 10%;
+.MessageTable tr > td:nth-child(3) {
+    width: 12%;
     text-align: center;
 }
-/*.MessageTable tr *:nth-child(4) {
-    width: 10%;
-    text-align: center;
-}*/
 .MessageTable td {
     vertical-align: middle;
     /*border: 1px solid #000000;*/
     border-width: 0px 1px 1px 0px;
     text-align: left;
-    padding: 8px;
+    padding: 5px 0;
     font-size: 14px;
     font-family: Arial;
     font-weight: normal;

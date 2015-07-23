@@ -159,7 +159,14 @@ class Redirect {
         $redirect_target = get_post_meta($post->ID, '_redirect_target', true);
         // Display the form, using the current value.
         echo '<label for="redirect_target">' . __('Enter the redirect target of the post or page.', 'tcc' ) . '</label><br/>';
-        echo '<input type="text" id="redirect_target" name="redirect_target" value="' . (($redirect_target != '') ? esc_attr($redirect_target) : '') . '" size="25" /><br/>';
+        // echo '<input type="text" id="redirect_target" name="redirect_target" value="' . (($redirect_target != '') ? esc_attr($redirect_target) : '') . '" size="25" /><br/>';
+        echo '<select id="redirect_target" name="redirect_target">
+            <option value="">請選擇</option>
+            <option value="_self"' . ((esc_attr($redirect_target) == '_self') ? ' selected' : '') . '>在目前視窗開啟</option>
+            <option value="_parent"' . ((esc_attr($redirect_target) == '_parent') ? ' selected' : '') . '>在上層視窗開啟</option>
+            <option value="_top"' . ((esc_attr($redirect_target) == '_top') ? ' selected' : '') . '>在頂層視窗開啟</option>
+            <option value="_blank"' . ((esc_attr($redirect_target) == '_blank') ? ' selected' : '') . '>另開新視窗</option>
+        </select>';
     }
     /**
      * 儲存文章時，儲存文章參數設定。
@@ -225,6 +232,6 @@ function custom_columns($column, $post_id) {
     if ($column === 'expiration') {
         echo get_post_meta($post_id, '_expiration', true);
     } else if ($column === 'redirect') {
-        echo get_post_meta($post_id, '_redirect', true);
+        echo get_post_meta($post_id, '_redirect', true) . ((get_post_meta($post_id, '_redirect_target', true) == "") ? "" : "<br/>[" . get_post_meta($post_id, '_redirect_target', true) . "]");
     }
 }

@@ -16,13 +16,13 @@ class ThemeCustomiser {
 
     function add_customize_color(){
         $marquee_text_color = get_theme_mod('marquee_text_color');
-        if($marquee_text_color) echo '<style>.marquee li{color:' . $marquee_text_color . ';}</style>';
+        if($marquee_text_color) echo '<style>.marquee li{color: ' . $marquee_text_color . ';}</style>';
  
         $background_color = get_theme_mod('background_color');
-        if($background_color) echo '<style>body{color:' . $background_color . ';}</style>';
+        if($background_color) echo '<style>body{background-color: #' . $background_color . ';}</style>';
 
         $header_textcolor = get_theme_mod('header_textcolor');
-        if($header_textcolor) echo '<style>header{color:' . $header_textcolor . ';}</style>';
+        if($header_textcolor) echo '<style>header{color: #' . $header_textcolor . ';}</style>';
     }
 }
 add_action('wp_head', array('ThemeCustomiser', 'add_customize_color'));
@@ -34,7 +34,7 @@ add_theme_support('custom-header', array(
     'height'                 => 240,
     'flex-width'             => true,
     'flex-height'            => true,
-    'header-text'            => true, //自訂標題文字顏色
+    'header-text'            => false, //自訂標題文字顏色
     'default-text-color'     => '#000000', //默認文字顏色
     'uploads'                => true, //是否允許上傳
     'wp-head-callback'       => '',
@@ -42,13 +42,61 @@ add_theme_support('custom-header', array(
     'admin-preview-callback' => '',
 ));//自定表頭圖
 
-add_theme_support('custom-background', array(
-    'default-color'          => '#6CC',
-    'default-image'          => get_template_directory_uri() . '/images/background.jpg',
-    'wp-head-callback'       => '_custom_background_cb',
-    'admin-head-callback'    => '',
-    'admin-preview-callback' => ''
-));//自定背景顏色
+if (! function_exists('change_custom_background_cb')) :
+    function change_custom_background_cb() {
+        $background = get_background_image();
+        $color = get_background_color();
+        if ( ! $background && ! $color )
+            return;
+        $style = $color ? "background-color: #$color;" : '';
+        if ( $background ) {
+            $image = " background-image: url('$background');";
+
+            $repeat = get_theme_mod( 'background_repeat', 'repeat' );
+
+            if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
+                $repeat = 'repeat';
+
+            $repeat = " background-repeat: $repeat;";
+
+            $position = get_theme_mod( 'background_position_x', 'left' );
+
+            if ( ! in_array( $position, array( 'center', 'right', 'left' ) ) )
+                $position = 'left';
+
+            $position = " background-position: top $position;";
+
+            $attachment = get_theme_mod( 'background_attachment', 'scroll' );
+
+            if ( ! in_array( $attachment, array( 'fixed', 'scroll' ) ) )
+                $attachment = 'scroll';
+
+            $attachment = " background-attachment: $attachment;";
+
+            $style .= $image . $repeat . $position . $attachment;
+        }
+        ?>
+        <style type="text/css" id="custom-background-css">
+            .custom-background { 
+                <?=trim( $style );?>
+            }
+        </style>
+        <?
+    }
+    global $wp_version;
+    if ( version_compare( $wp_version, '3.4', '>=' ) ) {
+        add_theme_support('custom-background', array(
+            'default-color'          => '#6CC',
+            'default-image'          => get_template_directory_uri() . '/images/background.jpg',
+            'wp-head-callback'       => 'change_custom_background_cb',
+            'admin-head-callback'    => '',
+            'admin-preview-callback' => ''
+        ));//自定背景顏色
+    }
+    else {
+        add_custom_background('change_custom_background_cb');
+    }
+endif;
 
         // $wp_manager->add_section('footer', array(
         //     'title' => __('footer', 'tcc'),

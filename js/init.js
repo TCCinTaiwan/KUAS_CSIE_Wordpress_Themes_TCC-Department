@@ -1,5 +1,4 @@
 $(document).ready(function (){
-
     $("#marquee").marquee();//執行跑馬燈
 
     //$(".tablesorter").tablesorter( {sortList: [[1,1], [0,0]]});//表格排序

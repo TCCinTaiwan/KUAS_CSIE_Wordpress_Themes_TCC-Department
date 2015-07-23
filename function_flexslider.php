@@ -4,7 +4,8 @@ function tcc_flexslider() {
     echo '<div class="flexslider_box"><div class="flexslider"><ul class="slides">';
     $options = ThemeOptions::getOptions(); //載入主題設定值
     $lang = get_locale();
-    if (count($options[$lang]['flex']) > 0 ) {
+    $flexCount = 1;
+    if ($flexCount > 0) {
         foreach ($options[$lang]['flex'] as $key => $value) {
             //echo '<li><img src="' . $value . '"/></li>';
             echo '<li>' . $value . '</li>';

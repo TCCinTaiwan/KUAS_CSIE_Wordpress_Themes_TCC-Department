@@ -4,7 +4,7 @@ Theme URI:
 Description: 這是一個要用來當高雄應用科技大學資訊工程系系網的主題，第一次做，還望多指教。
 Author: TCC
 Author URI: 203.64.91.82/Blog
-Version: 0.7
+Version: 0.8
 Tags: education
 License:
 License URI:
@@ -79,15 +79,14 @@ h3 {
 
 /* Main */
 body {
-    background: #FAFAFA;
-    font-family: "verdana", "Times New Roman", "新細明體", "微軟正黑體";
-    /*font-family: "Open Sans", sans-serif;*/
+    /*background: #6FFFFF;背景色*/
+    font-family: "setofont", "verdana", "Times New Roman", "新細明體", "微軟正黑體";
     /*background: url(images/background.jpg) repeat left 3px;*/
 }
 .container {
     width: 1000px;
-    background: #FFFFFF;
-    box-shadow: 0 5px 50px #000;
+    /*background: #FFFFFF;*/
+    /*box-shadow: 0 5px 50px #000;*/
     margin: 0 auto 50px;
     padding: 0 10px;
 }
@@ -95,7 +94,8 @@ body {
     width: 100%;
     text-align: center;
 }
-.header-link {/*..........................*/
+/*上方連結*/
+.header-link {
     position: relative;
     float: right;
     display: block;
@@ -138,24 +138,24 @@ body {
     width: 80%;
     float: left;
 }
+/* Flexslider圖片牆 */
+.flexslider_box {
+    margin: 0 50px;
+}
+/* 側邊攔 */
 .sidebar {
     width: 20%;
     float: left;
 }
 .sidebar h1 {
-    font: 'Trebuchet MS', Trebuchet, SimSun, sans-serif;
+    /*font: "setofont", 'Trebuchet MS', Trebuchet, SimSun, sans-serif;*/
     font-weight: bold;
 }
 .sidebar ul {
-    font: normal normal 15px 'Trebuchet MS', Trebuchet, SimSun, sans-serif;
     font-weight: bold;
-    list-style: square;
+    font-size: 15px;
+    list-style: none;
 }
-/* Flexslider_box */
-.flexslider_box {
-    margin: 0 50px;
-}
-/* Sidebar */
 .sidebar-right {
     margin: 0;
     padding: 5px 5px;
@@ -181,7 +181,7 @@ body {
 }
 .article-content div { /*子頁面*/
     /*font: 15px/1.7 "Open Sans", sans-serif;*/
-    font-family:   "微軟正黑體","新細明體","verdana", "Times New Roman";
+    font-family: "微軟正黑體","新細明體","verdana", "Times New Roman";
 
     color: #565656;
     margin: 15px 10px;
@@ -223,18 +223,19 @@ body {
     color: #FFF;
 }
 
-/* PageNavi */
+/* 頁數選擇 */
 .wp-pagenavi {
-    /*margin: 30px;*/
-    padding: 20px 0;
-    background: #FFF;
+    border-radius: 5px;
+    padding: 10px 0;
 }
 .pages {
     color: #888;
     margin-right: 13px;
+    background: #FFF;
 }
 .page-numbers {
     padding: 5px 10px;
+    margin: 0;
     color: #FFF;
     background: #888;
     text-decoration: none;
@@ -327,4 +328,20 @@ body {
 
 .tagcloud a {
     font: 20px;
+}
+/* 檔案格式 */
+.fa-file-word-o{
+    color: blue;
+}
+.fa-file-pdf-o{
+    color: red;
+}
+.fa-file-excel-o{
+    color: green;
+}
+.fa-file-powerpoint-o{
+    color: brown;
+}
+.fa-file-code-o{
+    color: magenta;
 }

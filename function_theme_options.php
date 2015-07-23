@@ -25,6 +25,13 @@ class ThemeOptions {
           }
           return $languages_list;
      }
+     static function get_language_name($lang = 'zh_TW') {
+          $transient_pll_languages_list = get_option('_transient_pll_languages_list');
+          foreach ($transient_pll_languages_list as $language) {
+               if ($language['locale'] == $lang) return $language['name'];
+          }
+          return NULL;
+     }
      static function init() {
           if(isset($_POST['option_save'])) {
                $options = ThemeOptions::getOptions();
@@ -86,37 +93,94 @@ class ThemeOptions {
           );
           $page = $pages[$page];
           // echo '<pre>' . var_dump($page) . '</pre>';//顯示
-               echo '<script>jQuery(document).ready(function() {jQuery("#add_' . $page['fileds']['id'] . '").click(function() {jQuery("#' .  $page['fileds']['id'] . '_list > br:last").after("';
+          // JavaScript產生
+          // echo '<script>
+          //      jQuery(document).ready(function() {jQuery("#add_' . $page['fileds']['id'] . '").click(function() {jQuery("#' .  $page['fileds']['id'] . '_list > br:last").after("';
+          //      foreach ($options as $option_key => $option) {
+          //           echo '<input type=\'text\' name=\'' .  $page['fileds']['id'] . '_' . $option_key . '[]\' />';
+          //      }
+          //      echo '<br />");});});
+          // </script>';
+          echo '<script>
+               jQuery(document).ready(function() {jQuery("#add_' . $page['fileds']['id'] . '").click(function() {jQuery("#' .  $page['fileds']['id'] . '_list > tr:last").after("<tr><td>';
                foreach ($options as $option_key => $option) {
-                    echo '<input type=\'text\' name=\'' .  $page['fileds']['id'] . '_' . $option_key . '[]\' />';
+                    echo '<label>' . ThemeOptions::get_language_name($option_key) . '</label><input type=\'text\' name=\'' .  $page['fileds']['id'] . '_' . $option_key . '[]\' />';
                }
-               echo '<br />");});});</script>';
+               echo '</td></tr>");});});
+          </script>';
+          // CSS 產生
+          echo '<style type="text/css">
+          .tcc-theme-list-table td > label {
+               min-width: 5%;
+               display: inline-block;
+          }
+          .tcc-theme-list-table td > input {
+               min-width: 90%;
+               display: inline-block;
+          }
+          </style>';
 
           echo '<div class="wrap"><h1>' . $page['title'] . '</h1><form method="post" name="form" id="form">';
-               echo '<p><div id="' .  $page['fileds']['id'] . '_list"><h3>' . $page['fileds']['title'] . '</h3>';
-               for ($i = 0; $i < count($options[get_locale()][ $page['fileds']['id']]); $i++) {
-                    foreach ($options as $option_key => $option) {
-                         echo '<input type="text" name="' .  $page['fileds']['id'] . '_' . $option_key . '[]" value="' . $option[ $page['fileds']['id']][$i]. '"/>';
-                    }
-                    echo '<br />';
-               }
+          // echo '<p><div id="~' .  $page['fileds']['id'] . '_list"><h3>' . $page['fileds']['title'] . '</h3>';
+          // foreach ($options as $option_key => $option) {
+          //      echo '<input type="text" value="' . $option_key . '" disabled />';
+          // }
+          // echo '<br />';
+          // for ($i = 0; $i < count($options[get_locale()][ $page['fileds']['id']]); $i++) {
+          //      foreach ($options as $option_key => $option) {
+          //           echo '<input type="text" name="' .  $page['fileds']['id'] . '_' . $option_key . '[]" value="' . $option[ $page['fileds']['id']][$i]. '"/>';
+          //      }
+          //      echo '<br />';
+          // }
+          // foreach ($options as $option_key => $option) {
+          //      echo '<input type="text" name="' .  $page['fileds']['id'] . '_' . $option_key . '[]" />';
+          // }
+          // echo '<br /></div><input type="button" id="add_' .  $page['fileds']['id'] . '" value="增加項目" /></p>';
+          
+          echo '<div class="alignleft actions bulkactions">
+               <input type="button" id="add_' .  $page['fileds']['id'] . '" class="button"  value="' . __('Additional Items','tcc') . '">
+          </div>';
+          echo '<div class="alignleft actions bulkactions">
+               <input type="submit" id="option_save" name="option_save" class="button action"  value="' . __('Save Settings','tcc') . '">
+          </div>';
+          echo 
+          '<table class="wp-list-table widefat fixed striped tcc-theme-list-table">
+               <thead>
+                    <tr>
+                         <th scope="col" id="name" class="manage-column column-name">' . $page['title'] . '</th>
+                    </tr>
+               </thead>
+               <tbody id="' .  $page['fileds']['id'] . '_list">';
+          for ($i = 0; $i < count($options[get_locale()][ $page['fileds']['id']]); $i++) {
+               echo '<tr><td>';
                foreach ($options as $option_key => $option) {
-                    echo '<input type="text" name="' .  $page['fileds']['id'] . '_' . $option_key . '[]" />';
+                    echo '<label>' . ThemeOptions::get_language_name($option_key) . '   </label><input type="text" name="' .  $page['fileds']['id'] . '_' . $option_key . '[]" value="' . $option[ $page['fileds']['id']][$i]. '"/>';
                }
-               echo '<br /></div><input type="button" id="add_' .  $page['fileds']['id'] . '" value="增加項目" /></p>';
+               echo '</td></tr>';
+          }
+          echo '<tr><td>';
+          foreach ($options as $option_key => $option) {
+               echo '<label>' . ThemeOptions::get_language_name($option_key) . '   </label><input type="text" name="' .  $page['fileds']['id'] . '_' . $option_key . '[]" />';
+          }
+          echo '</td></tr>';
+
+          echo '</tbody>
+               <tfoot>
+                    <tr>
+                         <th scope="col" class="manage-column column-name" style="">' . $page['title'] . '</th>
+                    </tr>
+               </tfoot>
+          </table></div>';
+
+
           wp_nonce_field('update-options');
           echo '<input type="hidden" name="action" value="update" />
                <input type="hidden" name="page_options" value="logo" />
-               <p class="submit">
-                    <input type="submit" name="option_save" value="' . __('Save Settings','tcc') . '" />
-               </p>
-          </form>
-          </div>';
+          </form>';
           /* MCE Editer */
           $editor_id = 'content';
-          $content = RRRRRGGG;
+          $content = '';
           wp_editor($content, $editor_id, $settings = array());
-          // default settings
           $settings = array(
                'wpautop' => true, // use wpautop?
                'media_buttons' => true, // show insert/upload button(s)
@@ -130,10 +194,12 @@ class ThemeOptions {
                'tinymce' => true, // load TinyMCE, can be used to pass settings directly to TinyMCE using an array()
                'quicktags' => true // load Quicktags, can be used to pass settings directly to Quicktags using an array()
           );
+          /* MCE Editer */
 
+          // 顯示變數，方便DEBUG
           if ($display_debug) {
                echo '<pre>';
-               var_dump($options);// 顯示變數
+               var_dump($options);
                echo '</pre>';
           }
      }

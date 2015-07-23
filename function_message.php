@@ -2,7 +2,7 @@
 /* 顯示公告 */
 function tcc_message_table() {
     global $cat, $tag, $post;
-    echo '<div class="MessageTable"><table class="tablesorter">';
+    echo '<div class="MessageTable"><h1>' . __('News', 'tcc') . '</h1><div class="loading"></div><table class="tablesorter">';
     //echo '<thead><tr><th>' . __('Title','tcc') . '</th><th>' . __('Date','tcc') . '</th><th>' . __('Type','tcc') . '</th></tr> </thead>';
     echo '<tbody>';
     if (have_posts()) :
@@ -45,12 +45,87 @@ function tcc_message_table() {
             }
             //$expiration  = new DateTime(get_post_meta($post->ID, '_expiration', true));
             // 判斷過期if ($expiration >= new DateTime(date("y-m-d H:i:s"))) :
-            echo '<a href="' . get_post_permalink() . '">'. get_the_title($post->ID) . '</a></td><td>' . get_post_time(__('Y/m/d','tcc')) . '</td><td>';
+            echo '<a href="' . get_post_permalink() . '">'. get_the_title($post->ID) . '</a>';
+
+
+
+            $attachments = get_posts( array(
+                'post_type' => 'attachment',
+                'posts_per_page' => 0,
+                'post_parent' => $post->ID
+            ));
+            if ($attachments) {
+                foreach ( $attachments as $attachment ) {
+                    switch ($attachment->post_mime_type) {
+                        case 'text/plain'://純文字
+                            $filetype = 'file-text-o';
+                            break;
+                        case 'text/html'://HTML文檔
+                            $filetype = 'file-code-o';
+                            break;
+                        case 'application/xhtml+xml'://XHTML文檔
+                            $filetype = 'file-o';
+                            break;
+                        case 'image/gif'://GIF圖像
+                            $filetype = 'file-image-o';
+                            break;
+                        case 'image/pjpeg'://JPEG圖像(image/jpeg)
+                            $filetype = 'file-image-o';
+                            break;
+                        case 'image/x-png'://PNG圖像(image/png)
+                            $filetype = 'file-image-o';
+                            break;
+                        case 'video/mpeg'://MPEG動畫
+                            $filetype = 'file-video-o';
+                            break;
+                        case 'application/octet-stream'://任意的二進位數據
+                            $filetype = 'file-text';
+                            break;
+                        case 'application/pdf'://PDF文檔
+                            $filetype = 'file-pdf-o';
+                            break;
+                        case 'application/msword'://Microsoft Word文件
+                            $filetype = 'file-word-o';
+                            break;
+                        case 'application/vnd.wap.xhtml+xml'://wap1.0+
+                            $filetype = 'file-o';
+                            break;
+                        case 'application/xhtml+xml'://wap2.0+
+                            $filetype = 'file-o';
+                            break;
+                        case 'message/rfc822'://RFC 822形式
+                            $filetype = 'file-o';
+                            break;
+                        case 'multipart/alternative'://HTML郵件的HTML形式和純文本形式，相同內容使用不同形式表示
+                            $filetype = 'file-o';
+                            break;
+                        case 'application/x-www-form-urlencoded'://使用HTTP的POST方法提交的表單
+                            $filetype = 'file-o';
+                            break;
+                        case 'multipart/form-data'://同上，但主要用於表單提交時伴隨文件上傳的場合
+                            $filetype = 'file-o';
+                            break;
+                        default:
+                            $filetype = 'file-o';
+                            break;
+                    }
+                    // echo wp_get_attachment_image($attachment->ID, false);
+                    // var_dump($attachment);
+                    echo '<a href="' . wp_get_attachment_url($attachment->ID) . '" title="' . $attachment->post_title . '(' . wpatt_format_bytes(filesize(get_attached_file($attachment->ID))) . ')">
+                    <i class="fa fa-' . $filetype . '"></i>
+                    </a>';
+                    // echo wp_get_attachment_link($attachment->ID, 'medium', 'False', 'True');
+                }
+            }
+
+            echo '</td><td>' . get_post_time(__('Y/m/d','tcc')) . '</td><td>';
             the_tags('', ',','');
             echo '</td></tr>';
         endwhile;
     endif;
-    echo '</tbody></table></div>';
+    echo '</tbody></table>';
+    tcc_pagenavi();
+    echo '</div>';
 }
 /* 頁數顯示 */
 function tcc_pagenavi() {
@@ -66,6 +141,12 @@ function tcc_pagenavi() {
     if ($max > 1) {
         echo '<div class="wp-pagenavi"><span class="pages">共 ' . $max . ' 頁</span>' . paginate_links($args) . '</div>';
     }
+    // <div class="btn-group" role="group" aria-label="First group">
+    // <button type="button" class="btn btn-default">1</button>
+    // <button type="button" class="btn btn-default">2</button>
+    // <button type="button" class="btn btn-default">3</button>
+    // <button type="button" class="btn btn-default">4</button>
+    // </div>
 }
 
 /* 頁數顯示 */

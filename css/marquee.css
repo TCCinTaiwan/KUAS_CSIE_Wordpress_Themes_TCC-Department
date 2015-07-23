@@ -18,12 +18,12 @@ ul.marquee {
 ul.marquee li {
 	/* required styles */
 	position: absolute;
-	top: -999em;
-	left: 0;
 	display: block;
+	top: -999em;/*隱藏起來*/
+	left: 0;
 	white-space: nowrap; /* keep all text on a single line */
 
 	/* optional styles for appearance */
-	font: bold 34px Arial, Helvetica, sans-serif ;
-	padding: 3px 5px;
+	font: normal 30px 'sourcehansans-tc', Arial, Helvetica, sans-serif ;
+	padding: 0px 0px;
 }

@@ -71,7 +71,7 @@
     /*text-shadow: 1px 1px 0 rgba(128, 128, 128, 0.4);*/
     font-weight: bold;
     font-size: 18px;
-    font-family: "微軟正黑體", sans-serif, Helvetica, Arial;
+    font-family: "setofont";
     /*border-right: 1px solid #080808;*//*分隔線*/
     color: #000000;
 }
@@ -153,7 +153,7 @@
     position: relative;
     margin: 0;
     padding: 8px 20px;
-    font: 10pt Arial, Helvetica, sans-serif;
+    font: 10pt;
     color: #ffffff;
     text-decoration: none;
     /*text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);*/
@@ -189,7 +189,7 @@
     position: relative;
     margin: 0;
     padding: 8px 20px;
-    font: 10pt Arial, Helvetica, sans-serif;
+    font: 10pt;
     color: #ffffff;
     text-decoration: none;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);

@@ -9,6 +9,29 @@
     電話：0978-038-566
     E-mail：john987john987@gmail.com
 版本記錄：
+// (O)(Δ)(Χ)
+// ☆★◇◆ＯＸ
+    = 0.8 (2015-07-23) =
+        改版內容：
+            1.加入WP Attachments套件，支援附檔。
+            2.加入justfont的字型。
+            3.Flexslider圖片牆改成較彈性的HTML語法，而不是圖片網址引用圖片而已。
+            4.修改Readme排版，待改版功能依重要性排序，並將之前想到的點子加入。
+            5.將文章重導向目標改成下拉式選單。
+            6.jQuery從1.11.2更新成2.1.4，目前沒發現不相容。
+            7.預先加入Bug Tracker圖示。
+            8.初步加入AngularJS。
+            9.連結直接放在選單。
+            10.最新消息使用Ajax處理。
+            11.頁面也使用Ajax。
+            12.將上傳檔案改成日期時間加流水號。
+            13.先將回報做在Google表單。
+            14.加入Awesome字型。
+            15.標題顯示附檔。
+            16.後台主題選項，改用表格當底。
+        新增構想：
+            1.初步加入LESS。
+            2.使用者自訂樣式。
     = 0.7 (2015-07-13) =
         改版內容：
             1.將標題連到學校首頁改成雙語的。
@@ -16,8 +39,8 @@
             3.將跑馬燈、圖片牆、頁尾資訊後台設定畫面顯示功能合併成單一函式。
             4.修正Fifefox跑馬燈顯示不正常CSS語法。
             5.安裝Auto Thickbox來顯示文章中圖片。
-        待改版功能：
-            1.Flexslider圖片牆功能增強，支援圖文。
+        新增構想：
+            1.Flexslider圖片牆功能增強，支援圖文。(Δ)
             2.新文章、即將過期通知。
             3.回報系統。
             4.Q&A。
@@ -29,20 +52,34 @@
             4.將標題隱藏，直接使用一張圖代替。
             5.採用Cool Tag Cloud。
             6.暫時不提供留言的功能。
-        待改版功能：
-            1.更新英文內容。
-            2.跑馬燈、底部資訊資料庫分開。
+        新增構想：
+            1.更新英文內容。(Χ)
+            2.跑馬燈、底部資訊資料庫分開。(Δ)
+待改版功能：
+       重要性      便利性
+    (★★★★★)(◆◆◆◆◇)Q&A。
+    (★★★★☆)(◆◇◇◇◇)更新英文內容。
+    (★★★★☆)(◆◆◆◇◇)AJAX更新。
+    (★★★☆☆)(◆◆◆◇◇)新文章、即將過期通知。
+    (★★★☆☆)(◆◆◆◇◇)熱門文章通知。
+    (★★★☆☆)(◇◇◇◇◇)初步加入LESS。
+    (★★★☆☆)(◇◇◇◇◇)初步加入AngularJS。
+    (★☆☆☆☆)(◆◆◆◆◇)回到頂端。
+    (★☆☆☆☆)(◆◇◇◇◇)使用者自訂樣式。
+    (☆☆☆☆☆)(◇◇◇◇◇)簡體版。[目前暫無需求。]
+    (          )(          )整合相簿。
+    (          )(          )討論版。[和Q&A部分重疊]
 選單：
     簡介Introduction
         沿革History
         位置Location
         師資Teachers
         特色Priorities
-            課綱lessons Gang
             實驗室Laboratory
             雙學制KUAS/CSUSB Articulation Plan
             核心能力Core Competence
             目標Goals
+        課綱lessons Gang
         未來Future
             就業Employment
             展望Outlook
@@ -100,3 +137,11 @@ Congratulations! TAO-HSING CHANG teacher promoted to Associate Professor.
 
 恭賀!羅孟彥老師榮升副教授。
 Congratulations! Mon-Yen Luo teacher promoted to Associate Professor.
+
+
+<div style=width:100%;>
+    <video style=padding-left:40px; controls=controls autoplay width=640 height=480>
+        <source src=video.mp4 type=video/mp4 />
+        不支援video元件
+    </video>
+</div>
