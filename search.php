@@ -1,5 +1,5 @@
 <? get_header();?>
-<div class="content">
+<div id="content" class="content">
     <div class="article">
         <? if (have_posts()) :?>
             <? while (have_posts()) : the_post();?>
@@ -23,9 +23,6 @@
             </article>
         <? endif;?>
         <? wp_pagenavi();?>
-    </div>
-    <div class="sidebar">
-    <? get_sidebar();?>
     </div>
 </div>
 <? get_footer();?>

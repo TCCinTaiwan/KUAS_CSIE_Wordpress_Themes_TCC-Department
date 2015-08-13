@@ -24,7 +24,7 @@
     <!-- 重置CSS -->
     
     <!-- Awesome 4.3.0 -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Awesome 4.3.0 -->
 
     <link href="<?bloginfo('template_directory')?>/css/style.css" media="screen" rel="stylesheet" type="text/css" />
@@ -34,6 +34,7 @@
     <link href="<?bloginfo('template_directory')?>/css/marquee.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?bloginfo('template_directory')?>/css/message.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?bloginfo('template_directory')?>/css/flexslider.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?bloginfo('template_directory')?>/css/filetype.css" media="screen" rel="stylesheet" type="text/css" />
 
     <script src="<?bloginfo('template_directory')?>/js/jquery-2.1.4.js"></script>
 
@@ -44,8 +45,8 @@
     <!-- bootstrap -->
 
     <!-- justfont字型 -->
-    <link href='//fonts.googleapis.com/css?family=Asap:400' rel='stylesheet' type='text/css'>
-    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-34306.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Asap:400' rel='stylesheet' type='text/css'>
+    <script src="http://s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-34306.js"></script>
     <!-- justfont字型 -->
 
     <script src="<?bloginfo('template_directory')?>/js/jquery.marquee.min.js"></script>
@@ -60,11 +61,13 @@
 
     <script src="<?bloginfo('template_directory')?>/js/ajax.js"></script>
     
+    <script src="<?bloginfo('template_directory')?>/js/gotop.js"></script>
+    
     <link href="<?bloginfo('template_directory')?>/style.css" media="screen" rel="stylesheet" type="text/css" />
-
     <?wp_head();?>
 </head>
 <body class="custom-background">
+    <h1 class="hide"><?wp_title();?></h1>
     <!-- 標題控制欄 -->
     <? wp_footer();?>
     <!-- 標題控制欄 -->
@@ -73,7 +76,6 @@
             <ul class='header-link'><? pll_the_languages(array('show_flags' => 1, 'hide_current' => 1));?></ul>
             <ul class='header-link'><li><a href="<?_e('http://eng.kuas.edu.tw/', 'tcc');?>"><img src="<? bloginfo('template_directory');?>/icon/KUAS.ico" width="16"><?_e(' KUAS', 'tcc');?></a></li></ul>
             <ul class='header-link'><li><a href="http://goo.gl/forms/6XE5xu3Z6E" Target="external" onclick="window.open('http://goo.gl/forms/6XE5xu3Z6E', 'external', 'width=800,height=600')"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span><?_e(' Bug Tracker', 'tcc');?></a></li></ul>
-            <!-- .................... -->
             <div class="title">
                 <a href="<? bloginfo('url');?>">
                     <img src="<?header_image();?>" height="<?=get_custom_header()->height;?>" width="<?=get_custom_header()->width;?>" alt="" />
@@ -81,6 +83,7 @@
             </div>
             <!-- 主選單 -->
             <nav id="navigation">
+                <h2 class="hide"><?_e('Primary Menu', 'tcc');?></h2>
                 <?
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
@@ -92,14 +95,4 @@
                 ?>
             </nav>
             <!-- 主選單 -->
-            <!-- 跑馬燈 -->
-            <section>
-                <h2 class='hide'><?_e('marquee');?></h2>
-                <ul id="marquee" class="marquee">
-                    <?foreach ($options[get_locale()]['marquee'] as $key => $value) {
-                        echo '<li>'.$value.'</li>';// class="setofont" 引用字型
-                    }?>
-                </ul>
-            </section>
-            <!-- 跑馬燈 -->
         </header>

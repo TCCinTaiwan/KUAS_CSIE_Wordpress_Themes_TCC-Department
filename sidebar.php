@@ -1,3 +1,3 @@
-<aside id="sidebar">
-    <? dynamic_sidebar('sidebar');?>
-</aside>
+<div class="sidebar">
+    <?get_sidebar();?>
+</div>

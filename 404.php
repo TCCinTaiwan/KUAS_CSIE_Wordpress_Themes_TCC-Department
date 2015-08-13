@@ -1,5 +1,5 @@
 <? get_header();?>
-<div class="content">
+<div id="content" class="content">
     <div class="article">
         <article class="article-content">
             <h1><?_e('404 Page Not Found','tcc' );?></h1>
@@ -12,9 +12,6 @@
                 <? wp_list_categories('orderby=ID&show_count=1&use_desc_for_title=0&title_li=&style=list');?>
             </ul>
         </article>
-    </div>
-    <div class="sidebar">
-        <? get_sidebar();?>
     </div>
 </div>
 <? get_footer();?>

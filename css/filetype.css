@@ -1,0 +1,483 @@
+.ape {
+    background: url(../images/file/ape.ico);
+}
+.au {
+    background: url(../images/file/au.ico);
+}
+.avi {
+    background: url(../images/file/avi.ico);
+}
+.bat {
+    background: url(../images/file/bat.ico);
+}
+.bin {
+    background: url(../images/file/bin.ico);
+}
+.bmp {
+    background: url(../images/file/bmp.ico);
+}
+.cab {
+    background: url(../images/file/cab.ico);
+}
+.chm {
+    background: url(../images/file/chm.ico);
+}
+.css {
+    background: url(../images/file/css.ico);
+}
+.dll {
+    background: url(../images/file/dll.ico);
+}
+.doc {
+    background: url(../images/file/doc.ico);
+}
+.docx {
+    background: url(../images/file/docx.ico);
+}
+.eml {
+    background: url(../images/file/eml.ico);
+}
+.fv4 {
+    background: url(../images/file/fv4.ico);
+}
+.fla {
+    background: url(../images/file/fla.ico);
+}
+.flac {
+    background: url(../images/file/flac.ico);
+}
+.flv {
+    background: url(../images/file/flv.ico);
+}
+.gif {
+    background: url(../images/file/gif.ico);
+}
+.hlp {
+    background: url(../images/file/hlp.ico);
+}
+.html {
+    background: url(../images/file/html.ico);
+}
+.ini {
+    background: url(../images/file/ini.ico);
+}
+.jpeg {
+    background: url(../images/file/jpeg.ico);
+}
+.jpg {
+    background: url(../images/file/jpg.ico);
+}
+.mid {
+    background: url(../images/file/mid.ico);
+}
+.midi {
+    background: url(../images/file/midi.ico);
+}
+.mkv {
+    background: url(../images/file/mkv.ico);
+}
+.mov {
+    background: url(../images/file/mov.ico);
+}
+.mp3 {
+    background: url(../images/file/mp3.ico);
+}
+.mp4 {
+    background: url(../images/file/mp4.ico);
+}
+.mpeg {
+    background: url(../images/file/mpeg.ico);
+}
+.mpg {
+    background: url(../images/file/mpg.ico);
+}
+.pdf {
+    background: url(../images/file/pdf.ico);
+}
+.playlist {
+    background: url(../images/file/playlist.ico);
+}
+.png {
+    background: url(../images/file/png.ico);
+}
+.ppt {
+    background: url(../images/file/ppt.ico);
+}
+.pptx {
+    background: url(../images/file/pptx.ico);
+}
+.psd {
+    background: url(../images/file/psd.ico);
+}
+.pst {
+    background: url(../images/file/pst.ico);
+}
+.rtf {
+    background: url(../images/file/rtf.ico);
+}
+.swf {
+    background: url(../images/file/swf.ico);
+}
+.theme {
+    background: url(../images/file/theme.ico);
+}
+.tif2 {
+    background: url(../images/file/tif2.ico);
+}
+.tiff2 {
+    background: url(../images/file/tiff2.ico);
+}
+.txt {
+    background: url(../images/file/txt.ico);
+}
+.url {
+    background: url(../images/file/url.ico);
+}
+.wav {
+    background: url(../images/file/wav.ico);
+}
+.wma {
+    background: url(../images/file/wma.ico);
+}
+.wmv {
+    background: url(../images/file/wmv.ico);
+}
+.xls {
+    background: url(../images/file/xls.ico);
+}
+.xlsx {
+    background: url(../images/file/xlsx.ico);
+}
+
+.i-7z {
+    background: url(../icon/file/7z.png);
+}
+.i-ai {
+    background: url(../icon/file/ai.png);
+}
+.i-aiff {
+    background: url(../icon/file/aiff.png);
+}
+.i-arj {
+    background: url(../icon/file/arj.png);
+}
+.i-asc {
+    background: url(../icon/file/asc.png);
+}
+.i-asp {
+    background: url(../icon/file/asp.png);
+}
+.i-audio {
+    background: url(../icon/file/audio.png);
+}
+.i-avi {
+    background: url(../icon/file/avi.png);
+}
+.i-bin {
+    background: url(../icon/file/bin.png);
+}
+.i-bmp {
+    background: url(../icon/file/bmp.png);
+}
+.i-bz2 {
+    background: url(../icon/file/bz2.png);
+}
+.i-c {
+    background: url(../icon/file/c.png);
+}
+.i-cdr {
+    background: url(../icon/file/cdr.png);
+}
+.i-cfc {
+    background: url(../icon/file/cfc.png);
+}
+.i-cfm {
+    background: url(../icon/file/cfm.png);
+}
+.i-chm {
+    background: url(../icon/file/chm.png);
+}
+.i-class {
+    background: url(../icon/file/class.png);
+}
+.i-conf {
+    background: url(../icon/file/conf.png);
+}
+.i-cpp {
+    background: url(../icon/file/cpp.png);
+}
+.i-cs {
+    background: url(../icon/file/cs.png);
+}
+.i-css {
+    background: url(../icon/file/css.png);
+}
+.i-csv {
+    background: url(../icon/file/csv.png);
+}
+.i-deb {
+    background: url(../icon/file/deb.png);
+}
+.i-divx {
+    background: url(../icon/file/divx.png);
+}
+.i-doc {
+    background: url(../icon/file/doc.png);
+}
+.i-docx {
+    background: url(../icon/file/docx.png);
+}
+.i-dot {
+    background: url(../icon/file/dot.png);
+}
+.i-eml {
+    background: url(../icon/file/eml.png);
+}
+.i-enc {
+    background: url(../icon/file/enc.png);
+}
+.i-eps {
+    background: url(../icon/file/eps.png);
+}
+.i-exe {
+    background: url(../icon/file/exe.png);
+}
+.i-f4v {
+    background: url(../icon/file/f4v.png);
+}
+.i-file {
+    background: url(../icon/file/file.png);
+}
+.i-flv {
+    background: url(../icon/file/flv.png);
+}
+.i-gif {
+    background: url(../icon/file/gif.png);
+}
+.i-gz {
+    background: url(../icon/file/gz.png);
+}
+.i-hlp {
+    background: url(../icon/file/hlp.png);
+}
+.i-htm {
+    background: url(../icon/file/htm.png);
+}
+.i-html {
+    background: url(../icon/file/html.png);
+}
+.i-ics {
+    background: url(../icon/file/ics.png);
+}
+.i-image {
+    background: url(../icon/file/image.png);
+}
+.i-iso {
+    background: url(../icon/file/iso.png);
+}
+.i-jar {
+    background: url(../icon/file/jar.png);
+}
+.i-java {
+    background: url(../icon/file/java.png);
+}
+.i-jpg {
+    background: url(../icon/file/jpg.png);
+}
+.i-js {
+    background: url(../icon/file/js.png);
+}
+.i-jsp {
+    background: url(../icon/file/jsp.png);
+}
+.i-lua {
+    background: url(../icon/file/lua.png);
+}
+.i-m {
+    background: url(../icon/file/m.png);
+}
+.i-mm {
+    background: url(../icon/file/mm.png);
+}
+.i-mov {
+    background: url(../icon/file/mov.png);
+}
+.i-mp3 {
+    background: url(../icon/file/mp3.png);
+}
+.i-mpg {
+    background: url(../icon/file/mpg.png);
+}
+.i-msi {
+    background: url(../icon/file/msi.png);
+}
+.i-odc {
+    background: url(../icon/file/odc.png);
+}
+.i-odf {
+    background: url(../icon/file/odf.png);
+}
+.i-odg {
+    background: url(../icon/file/odg.png);
+}
+.i-odi {
+    background: url(../icon/file/odi.png);
+}
+.i-odp {
+    background: url(../icon/file/odp.png);
+}
+.i-ods {
+    background: url(../icon/file/ods.png);
+}
+.i-odt {
+    background: url(../icon/file/odt.png);
+}
+.i-ogg {
+    background: url(../icon/file/ogg.png);
+}
+.i-pdf {
+    background: url(../icon/file/pdf.png);
+}
+.i-perl {
+    background: url(../icon/file/perl.png);
+}
+.i-pgp {
+    background: url(../icon/file/pgp.png);
+}
+.i-php {
+    background: url(../icon/file/php.png);
+}
+.i-pl {
+    background: url(../icon/file/pl.png);
+}
+.i-png {
+    background: url(../icon/file/png.png);
+}
+.i-ppt {
+    background: url(../icon/file/ppt.png);
+}
+.i-ps {
+    background: url(../icon/file/ps.png);
+}
+.i-psd {
+    background: url(../icon/file/psd.png);
+}
+.i-py {
+    background: url(../icon/file/py.png);
+}
+.i-ram {
+    background: url(../icon/file/ram.png);
+}
+.i-rar {
+    background: url(../icon/file/rar.png);
+}
+.i-rb {
+    background: url(../icon/file/rb.png);
+}
+.i-rm {
+    background: url(../icon/file/rm.png);
+}
+.i-rpm {
+    background: url(../icon/file/rpm.png);
+}
+.i-rtf {
+    background: url(../icon/file/rtf.png);
+}
+.i-ruby {
+    background: url(../icon/file/ruby.png);
+}
+.i-sig {
+    background: url(../icon/file/sig.png);
+}
+.i-sql {
+    background: url(../icon/file/sql.png);
+}
+.i-svg {
+    background: url(../icon/file/svg.png);
+}
+.i-swf {
+    background: url(../icon/file/swf.png);
+}
+.i-sxc {
+    background: url(../icon/file/sxc.png);
+}
+.i-sxd {
+    background: url(../icon/file/sxd.png);
+}
+.i-sxi {
+    background: url(../icon/file/sxi.png);
+}
+.i-sxw {
+    background: url(../icon/file/sxw.png);
+}
+.i-tar {
+    background: url(../icon/file/tar.png);
+}
+.i-tex {
+    background: url(../icon/file/tex.png);
+}
+.i-tgz {
+    background: url(../icon/file/tgz.png);
+}
+.i-tif {
+    background: url(../icon/file/tif.png);
+}
+.i-ttf {
+    background: url(../icon/file/ttf.png);
+}
+.i-txt {
+    background: url(../icon/file/txt.png);
+}
+.i-vb {
+    background: url(../icon/file/vb.png);
+}
+.i-vcf {
+    background: url(../icon/file/vcf.png);
+}
+.i-vdo {
+    background: url(../icon/file/vdo.png);
+}
+.i-video {
+    background: url(../icon/file/video.png);
+}
+.i-vsd {
+    background: url(../icon/file/vsd.png);
+}
+.i-wav {
+    background: url(../icon/file/wav.png);
+}
+.i-wma {
+    background: url(../icon/file/wma.png);
+}
+.i-xls {
+    background: url(../icon/file/xls.png);
+}
+.i-xml {
+    background: url(../icon/file/xml.png);
+}
+.i-xpi {
+    background: url(../icon/file/xpi.png);
+}
+.i-xul {
+    background: url(../icon/file/xul.png);
+}
+.i-xvid {
+    background: url(../icon/file/xvid.png);
+}
+.i-zip {
+    background: url(../icon/file/zip.png);
+}
+
+
+.filetype {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-size: contain;
+}
+.filetype_16 {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+}

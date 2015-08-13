@@ -1,17 +1,98 @@
 /*
 Theme Name: TCC-Department
 Theme URI:
-Description: 這是一個要用來當高雄應用科技大學資訊工程系系網的主題，第一次做，還望多指教。
+Description: 2015年高應大資工系系網使用WordPress製作，大約是從2014年11月開始研究的，一開始採用的是CodeIgniter，但是對於雙語支持，有些地方一直用不好，像是以文章的雙語支持，於是就找到了WordPress的Polylang感覺還蠻適合的拿來用的，一方面是我有點不太想自己寫後台，畢竟我還這麼嫩，不太可能防住大部分的攻擊。
 Author: TCC
 Author URI: 203.64.91.82/Blog
-Version: 0.8
+Version: 0.900
 Tags: education
 License:
 License URI:
 Text Domain:tcc
 */
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,#navigation div, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+#navigation div,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -19,70 +100,111 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
     vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup,#navigation div, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+#navigation div,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
+    margin-left: 40px;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+table * {
+    vertical-align: middle;
+    text-align: center;
+}
+
 a {
     color: #22A2EB;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 ul {
     margin-left: 25px;
 }
+
 li {
     /*list-style: square;*/
     margin: 5px 0;
     color: #555;
 }
+
 h1 {
     font-size: 32px;
     color: #555;
     line-height: 1.8;
     font-weight: 300;
 }
+
 h2 {
     font-size: 26px;
     line-height: 1.48;
 }
+
 h3 {
     font-size: 20px;
     line-height: 1.48;
     color: #777;
 }
+strong {
+    font-weight: bold;
+}
 .hide {
     display: none;
 }
 
+
 /* Main */
+
 body {
     /*background: #6FFFFF;背景色*/
     font-family: "setofont", "verdana", "Times New Roman", "新細明體", "微軟正黑體";
     /*background: url(images/background.jpg) repeat left 3px;*/
 }
+
 .container {
     width: 1000px;
     /*background: #FFFFFF;*/
@@ -90,11 +212,15 @@ body {
     margin: 0 auto 50px;
     padding: 0 10px;
 }
+
 .header {
     width: 100%;
     text-align: center;
 }
+
+
 /*上方連結*/
+
 .header-link {
     position: relative;
     float: right;
@@ -106,13 +232,19 @@ body {
     border-radius: 0 0 5px 5px;
     /*right: 30px;*/
 }
-.header-link a{
+
+.header-link a {
+    display: block;
     color: white;
+    text-align: left;
 }
+
 .title {
     margin: 30px 0 10px;
     padding: 0 0;
 }
+
+
 /*.title img{
     margin: -30px 0;
     display: block;
@@ -120,6 +252,7 @@ body {
     height: 140px;
     width: auto;
 }*/
+
 .title a {
     margin: 30px 0;
     font-size: 30px;
@@ -127,28 +260,38 @@ body {
     text-decoration: none;
 }
 
+
 /* Main Column */
+
 .content {
-    padding: 0 0 32px 0; /* 底部高度 */
+    padding: 0 0 32px 0;
+    /* 底部高度 */
     float: left;
     width: 100%;
-    margin: 10px 0 0;
+    margin: 0;
 }
+
 .article {
-    width: 80%;
+    width: 100%;
     float: left;
 }
+
+
 /* Flexslider圖片牆 */
+
 .flexslider_box {
     margin: 0 50px;
 }
+
+
 /* 側邊攔 */
-.sidebar {
+
+
+/*.sidebar {
     width: 20%;
     float: left;
 }
 .sidebar h1 {
-    /*font: "setofont", 'Trebuchet MS', Trebuchet, SimSun, sans-serif;*/
     font-weight: bold;
 }
 .sidebar ul {
@@ -166,44 +309,45 @@ body {
     line-height: 1.8;
     margin: 10px 0;
     color: #666;
-}
+}*/
+
 
 /* Posts */
+
 .article-content {
-    margin: 30px;
+    clear: left;
     padding: 20px;
     background: #FFF;
 }
+
 .article-content p {
     font: 15px/1.7 "Open Sans", sans-serif;
     color: #565656;
     margin: 15px 0;
 }
-.article-content div { /*子頁面*/
-    /*font: 15px/1.7 "Open Sans", sans-serif;*/
-    font-family: "微軟正黑體","新細明體","verdana", "Times New Roman";
 
-    color: #565656;
-    margin: 15px 10px;
-}
 .article-title {
     font-size: 32px;
     color: #555;
     line-height: 1.8;
     font-weight: 300;
 }
+
 .article-meta span {
     color: #888;
     font-size: 13px;
     margin-right: 7px;
 }
-.article-meta span a{
+
+.article-meta span a {
     color: #888;
     text-decoration: none;
 }
+
 .article-meta span a:hover {
     text-decoration: underline;
 }
+
 .clearfix {
     content: ".";
     display: block;
@@ -211,6 +355,7 @@ body {
     clear: both;
     visibility: hidden;
 }
+
 .more-link {
     float: right;
     color: #666;
@@ -218,21 +363,26 @@ body {
     background: #EFEFEF;
     text-decoration: none;
 }
+
 .more-link:hover {
     background: #888;
     color: #FFF;
 }
 
+
 /* 頁數選擇 */
+
 .wp-pagenavi {
     border-radius: 5px;
     padding: 10px 0;
 }
+
 .pages {
     color: #888;
     margin-right: 13px;
     background: #FFF;
 }
+
 .page-numbers {
     padding: 5px 10px;
     margin: 0;
@@ -240,20 +390,21 @@ body {
     background: #888;
     text-decoration: none;
 }
+
 .page-numbers:hover {
     color: #FFF;
     background: #666;
 }
+
 .page-numbers.current {
     color: #FFF;
     background: #666;
 }
 
+
 /* Footer */
+
 .footer {
-    /*舊版margin: 0px 30px 15px 30px;
-    float: left;
-    padding: 20px;*/
     font-size: 13px;
     border-top: 1px solid #D0D0D0;
     position: fixed;
@@ -266,34 +417,68 @@ body {
     margin: 20px 0 0 0;
     background: #23282d;
 }
+
 .footer div {
-    padding: 0 10pt;
+    padding: 0 5pt;
     float: left;
-    color :#FFFFFF;
+    color: #FFFFFF;
 }
+
+
+/* 版權 */
+
 .copyright {
     color: #888;
     font-size: 13px;
 }
+
 .copyright:hover {
     background: #555;
 }
-.copyright:hover a{
-    color :#FFF;
+
+.copyright:hover a {
+    color: #FFF;
 }
+
 .copyright a {
     color: #666;
     text-decoration: none;
 }
+
 .copyright a:hover {
     color: #CCC;
     text-decoration: underline;
 }
 
 
+/* 最後修改時間 */
+
+.lastmodified {
+    color: #888;
+    font-size: 13px;
+}
+
+.lastmodified:hover {
+    background: #555;
+}
+
+.lastmodified:hover a {
+    color: #FFF;
+}
+
+.lastmodified a {
+    color: #666;
+    text-decoration: none;
+}
+
+.lastmodified a:hover {
+    color: #CCC;
+    text-decoration: underline;
+}
 
 
 /* Breadcrumb */
+
 .breadcrumb {
     overflow: hidden;
     white-space: nowrap;
@@ -329,19 +514,167 @@ body {
 .tagcloud a {
     font: 20px;
 }
+
+
 /* 檔案格式 */
-.fa-file-word-o{
+
+.fa-file-word-o {
     color: blue;
 }
-.fa-file-pdf-o{
+
+.fa-file-pdf-o {
     color: red;
 }
-.fa-file-excel-o{
+
+.fa-file-excel-o {
     color: green;
 }
-.fa-file-powerpoint-o{
+
+.fa-file-powerpoint-o {
     color: brown;
 }
-.fa-file-code-o{
+
+.fa-file-code-o {
     color: magenta;
+}
+
+
+/* FlexSlider */
+
+
+/* style1 */
+
+.flexslider ul > li > div.style1 > img {
+    width: 100%;
+    padding: 0 80px;
+}
+
+.flexslider ul > li > div.style1 > div {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* GoTop按鈕 */
+
+#gotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+#gotop i {
+    font-size: 20px;
+    padding: 10px 15px;
+    color: white;
+    background: #777;
+}
+
+#gotop:hover div {
+    animation: 1s fat infinite alternate;
+}
+
+@keyframes fat {
+    transition-timing-function: ease-out;
+    0% {
+        margin: 10px 0px;
+    }
+    100% {
+        margin: 50px 0px;
+    }
+}
+
+#attachments a {
+    display: block;
+    vertical-align: middle;
+    float: left;
+    clear: left;
+    padding: 10px 0;
+}
+
+#attachments a > i {
+    float: left;
+}
+
+#attachments a > div {
+    float: left;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.tags {
+    margin: 0;
+}
+
+.tags ul {
+    margin: 0;
+    list-style: none;
+    float: left;
+    display: block;
+}
+
+.loading {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.loading div {
+    border: #000 2px dotted;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FFF;
+    height: 48px;
+    width: 240px;
+    line-height: 22px;
+    cursor: wait;
+    margin: 0px auto;
+}
+
+.card {
+    margin: 2px 0;
+    padding: 10px;
+    width: 100%;
+    float: left;
+    vertical-align: middle;
+    border: rgba(20%, 20%, 40%, 0.5) 1px solid;
+    box-shadow: 4px 4px 3px rgba(20%, 20%, 40%, 0.5);
+    -webkit-transition-property: box-shadow;
+    -moz-transition-property: box-shadow;
+    -o-transition-property: box-shadow;
+    transition-property: box-shadow;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 3px rgba(20%, 20%, 40%, 0.5);
+}
+
+.card > div {
+    margin: 0;
+    float: left;
+    display: inline-block;
+    line-height: 24px;
+}
+
+.card > div i {
+    width: 30px;
+    text-align: center;
+}
+
+.card > div img {
+    width: 100px;
+    height: auto;
 }

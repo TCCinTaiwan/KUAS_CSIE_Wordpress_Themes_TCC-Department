@@ -1,5 +1,6 @@
 <?get_header();?><!-- 載入頭部 -->
-<div class="content">
+<!-- archives -->
+<div id="content" class="content">
     <div class="article">
         <?breadcrumb_init();?><!-- 麵包屑 -->
         <?while (have_posts()) : the_post();?>
@@ -11,9 +12,6 @@
             </article>
         <?endwhile;?>
         <?wp_pagenavi();?><!-- 載入自定義頁數選單 -->
-    </div>
-    <div class="sidebar">
-        <?get_sidebar();?><!-- 載入側邊欄 -->
     </div>
 </div>
 <?get_footer();?><!-- 載入底部 -->

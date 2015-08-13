@@ -11,6 +11,26 @@
 版本記錄：
 // (O)(Δ)(Χ)
 // ☆★◇◆ＯＸ
+    = 0.9 (2015-08-13) =
+        改版內容：
+            1.修正子頁面問題。
+            2.修改主題選項結構，及後台主題選項成多欄位，並修正相對應的顯示程式。
+            3.Ajax網址。
+            4.右側選單移除，把標籤改到最新消息裡。
+            5.文章附檔顯示，增加圖庫。
+            6.修改載入中，顯示在網頁下方。
+            7.頁面統整成一頁。
+            8.修正FlexSlider位址。
+            9.修正附檔顯示不完全。
+            10.修正附檔導致排版歪掉。
+            11.修正參數不完全，新聞無法顯示附件。
+            12.修正顯示於標籤選單後的文章數量。
+            13.新文章、即將過期通知。
+        新增構想：
+            1.主題設定匯出。
+            2.選單匯出。
+            3.前一篇與下一篇。
+            4.附檔隱藏。
     = 0.8 (2015-07-23) =
         改版內容：
             1.加入WP Attachments套件，支援附檔。
@@ -40,9 +60,9 @@
             4.修正Fifefox跑馬燈顯示不正常CSS語法。
             5.安裝Auto Thickbox來顯示文章中圖片。
         新增構想：
-            1.Flexslider圖片牆功能增強，支援圖文。(Δ)
-            2.新文章、即將過期通知。
-            3.回報系統。
+            1.Flexslider圖片牆功能增強，支援圖文。(O)
+            2.新文章、即將過期通知。(O)
+            3.回報系統。(Δ)
             4.Q&A。
     = 0.6 (2015-07-10) =
         改版內容：
@@ -53,7 +73,7 @@
             5.採用Cool Tag Cloud。
             6.暫時不提供留言的功能。
         新增構想：
-            1.更新英文內容。(Χ)
+            1.更新英文內容。(Δ)
             2.跑馬燈、底部資訊資料庫分開。(Δ)
 待改版功能：
        重要性      便利性
@@ -67,6 +87,7 @@
     (★☆☆☆☆)(◆◆◆◆◇)回到頂端。
     (★☆☆☆☆)(◆◇◇◇◇)使用者自訂樣式。
     (☆☆☆☆☆)(◇◇◇◇◇)簡體版。[目前暫無需求。]
+    (          )(          )前一篇與下一篇
     (          )(          )整合相簿。
     (          )(          )討論版。[和Q&A部分重疊]
 選單：
@@ -79,7 +100,7 @@
             雙學制KUAS/CSUSB Articulation Plan
             核心能力Core Competence
             目標Goals
-        課綱lessons Gang
+        課綱Lessons Gang
         未來Future
             就業Employment
             展望Outlook
@@ -87,9 +108,6 @@
         歷任主管The list of Manager
         職員Staff
         課程Courses
-        課表Timetable
-        規章辦法Rules
-            學生獎勵辦法
         學術活動Academic Activities
         實習相關Fieldwork
     學生園地Student Corner
@@ -102,14 +120,19 @@
         電資學院Electrical Engineering and Computer Science(EECS)
             電子工程系Electronic Engineering(EC)
             電機工程系Electrical Engineering(EE)
-            光電與通訊工程研究所
+            光電與通訊工程研究所Graduate Institute of Phonics and Communications(IPC)
         選課系統Course Selection System
         TA課輔與數位學習平台iLearning
         雲端教學與學習平台CLS
         分機查詢Extension Phone
     下載Download
         課程教材Textbook
+            
         表單Forms
+            大學部Bachelor's Degree
+            碩士班Master's Degree
+        規章辦法Rules
+        課表Timetable
 系辦聯絡訊息：
     地址：80778 高雄市三民區建工路415號 育賢樓201
     Adress: No.415, Jiangong Rd., Sanmin Dist., Kaohsiung City 807, Taiwan (R.O.C.)
@@ -132,10 +155,10 @@ Computer Science and Information Engineering, the fourth grade class A Tom King-
 四資工四甲陳志昇同學考取國立成功大學 電腦與通信工程研究所。
 Computer Science and Information Engineering, the fourth grade class A Chen Zhi-Sheng obtain National Cheng Kung University Computers and Communication Engineering Institute.
 
-恭賀!張道行老師榮升副教授。
+恭賀！張道行老師榮升副教授。
 Congratulations! TAO-HSING CHANG teacher promoted to Associate Professor.
 
-恭賀!羅孟彥老師榮升副教授。
+恭賀！羅孟彥老師榮升副教授。
 Congratulations! Mon-Yen Luo teacher promoted to Associate Professor.
 
 
@@ -145,3 +168,22 @@ Congratulations! Mon-Yen Luo teacher promoted to Associate Professor.
         不支援video元件
     </video>
 </div>
+
+網站標題：高應大 資工系
+網站描述：國立高雄應用科技大學資訊工程系系網
+主題：TCC-Department
+外掛：
+    Polylang 雙語功能
+    TinyMCE Advanced 文字編輯
+    Auto Thickbox 顯示文章中圖片
+    WP Statistics 網站流量
+    Cool Tag Cloud 顯示最新消息分類
+
+    Crayon Syntax Highlighter 程式碼高亮顯示
+    WordPress Importer 文章匯入
+    WP-DBManager 資料庫備份
+    WP Attachments 文章附件顯示
+    Hyper Cache 降低伺服器負擔
+    Attachments 支援附檔。
+語言：
+    zh_TW

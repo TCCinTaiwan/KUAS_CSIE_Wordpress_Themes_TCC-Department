@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tcc\n"
-"POT-Creation-Date: 2015-07-23 23:35+0800\n"
-"PO-Revision-Date: 2015-07-23 23:35+0800\n"
+"POT-Creation-Date: 2015-08-13 16:29+0800\n"
+"PO-Revision-Date: 2015-08-13 16:30+0800\n"
 "Last-Translator: TCC <john987john987@yahoo.com.tw>\n"
 "Language-Team: TCC <john987john987@gmail.com>\n"
 "Language: zh_TW\n"
@@ -35,7 +35,7 @@ msgstr "回首頁"
 msgid "Search by Category"
 msgstr "以分類搜尋"
 
-#: archives.php:8 search.php:9 search.php:10 single.php:9
+#: archives.php:9 search.php:9 search.php:10 single.php:10
 msgid "Y/n/j"
 msgstr "Y年n月j日"
 
@@ -43,121 +43,165 @@ msgstr "Y年n月j日"
 msgid "last Update:"
 msgstr "最後更新："
 
-#: function_message.php:5
+#: footer.php:25
+msgid "Loading..."
+msgstr "載入中…"
+
+#: function/flexslider.php:3
+msgid "Flex Slider Box"
+msgstr ""
+
+#: function/message.php:5
 msgid "News"
 msgstr "最新消息"
 
-#: function_message.php:121
+#: function/message.php:7
+msgid "All"
+msgstr "全部"
+
+#: function/message.php:64
+msgid "Y/m/d H:i:s"
+msgstr "Y年m月d日 H時i分s秒"
+
+#: function/message.php:64
 msgid "Y/m/d"
 msgstr "Y年m月d日"
 
-#: function_meta_boxes.php:36
+#: function/message.php:85
+msgid "New"
+msgstr "新貼文"
+
+#: function/message.php:91
+msgid "Upcoming"
+msgstr "即將到期"
+
+#: function/message.php:104
+msgid "Attachments"
+msgstr "附件"
+
+#: function/meta_boxes.php:36
 msgid "expiration"
 msgstr "到期"
 
-#: function_meta_boxes.php:60
+#: function/meta_boxes.php:60
 msgid "Enter the expiration date of the post or page."
 msgstr "輸入的文章或網頁的到期日期。"
 
-#: function_meta_boxes.php:64
+#: function/meta_boxes.php:64
 msgid "Enter the expiration time of the post or page."
 msgstr "輸入的文章或網頁的到期時間。"
 
-#: function_meta_boxes.php:133
+#: function/meta_boxes.php:133
 msgid "redirect"
 msgstr "重導向"
 
-#: function_meta_boxes.php:155
+#: function/meta_boxes.php:155
 msgid "Enter the redirect URL of the post or page."
 msgstr "輸入文章或網頁的重定址位址。"
 
-#: function_meta_boxes.php:161
+#: function/meta_boxes.php:161
 msgid "Enter the redirect target of the post or page."
 msgstr "輸入文章或網頁的重定址目標。"
 
-#: function_meta_boxes.php:226
+#: function/meta_boxes.php:226
 msgid "Expiration"
 msgstr "到期"
 
-#: function_meta_boxes.php:227
+#: function/meta_boxes.php:227
 msgid "Redirect"
 msgstr "重導向"
 
-#: function_theme_customiser.php:10
+#: function/theme_customiser.php:10
 msgid "Marquee Text Color"
 msgstr "跑馬燈文字顏色"
 
-#: function_theme_options.php:53 function_theme_options.php:73
+#: function/theme_options.php:52 function/theme_options.php:161
 msgid "Theme Options"
 msgstr "主題選項"
 
-#: function_theme_options.php:54
+#: function/theme_options.php:53
 msgid "FlexSlider Options"
 msgstr "FlexSlider選項"
 
-#: function_theme_options.php:55
+#: function/theme_options.php:54 index.php:5
 msgid "Marquee"
 msgstr "跑馬燈"
 
-#: function_theme_options.php:68
+#: function/theme_options.php:156
 msgid "You do not have sufficient permissions to access this page."
 msgstr "您沒有足夠的權限來訪問此頁面。"
 
-#: function_theme_options.php:75
-msgid "Footer Info:"
-msgstr "頁尾資訊："
+#: function/theme_options.php:165
+msgid "Footer Info"
+msgstr "頁尾資訊"
 
-#: function_theme_options.php:80
-msgid "Setting the FlexSlider contents"
-msgstr "設定FlexSlider內容"
-
-#: function_theme_options.php:82
-msgid "FlexSlider Contents:"
-msgstr "FlexSlider內容："
-
-#: function_theme_options.php:87
+#: function/theme_options.php:173
 msgid "Setting the marquee message"
 msgstr "設置跑馬燈訊息"
 
-#: function_theme_options.php:89
+#: function/theme_options.php:177
 msgid "Marquee Message:"
 msgstr "跑馬燈訊息："
 
-#: function_theme_options.php:141
-msgid "Additional Items"
-msgstr "增加項目"
+#: function/theme_options.php:185
+msgid "Setting the FlexSlider contents"
+msgstr "設定FlexSlider內容"
 
-#: function_theme_options.php:144
+#: function/theme_options.php:189
+msgid "FlexSlider Title"
+msgstr "FlexSlider標題"
+
+#: function/theme_options.php:195
+msgid "FlexSlider Image"
+msgstr "FlexSlider影像"
+
+#: function/theme_options.php:201
+msgid "FlexSlider Style"
+msgstr "FlexSlider樣式"
+
+#: function/theme_options.php:206
+msgid "Style 1"
+msgstr "樣式一"
+
+#: function/theme_options.php:207
+msgid "Style 2"
+msgstr "樣式二"
+
+#: function/theme_options.php:250 function/theme_options.php:308
 msgid "Save Settings"
 msgstr "儲存設定"
 
-#: functions.php:26
+#: function/theme_options.php:251
+msgid "Import"
+msgstr "匯入"
+
+#: function/theme_options.php:252
+msgid "Export"
+msgstr "匯出"
+
+#: function/theme_options.php:308
+msgid "Additional Items"
+msgstr "增加項目"
+
+#: functions.php:30
 msgid "Primary Header Navigation"
 msgstr "主標題導航"
 
-#: functions.php:61
-msgid "Right sidebar"
-msgstr "右側邊欄"
-
-#: functions.php:63
-msgid "It appears to the right of the page."
-msgstr "顯示在網頁右方。"
-
-#: header.php:74
+#: header.php:77
 msgid "http://eng.kuas.edu.tw/"
 msgstr "http://www.kuas.edu.tw/"
 
-#: header.php:74
+#: header.php:77
 msgid " KUAS"
 msgstr " 高應大"
 
-#: header.php:75
+#: header.php:78
 msgid " Bug Tracker"
 msgstr " 錯誤回報"
 
-#: header.php:97
-msgid "marquee"
-msgstr "跑馬燈"
+#: header.php:86
+msgid "Primary Menu"
+msgstr "主選單"
 
 #: search.php:20
 msgid "Search Results"
@@ -177,9 +221,24 @@ msgstr "搜尋..."
 msgid "Search"
 msgstr "搜尋"
 
-#: single.php:15
+#: single.php:17
 msgid "Expiration date:"
 msgstr "到期時間："
+
+#~ msgid "Footer Info:"
+#~ msgstr "頁尾資訊："
+
+#~ msgid "FlexSlider Contents:"
+#~ msgstr "FlexSlider內容："
+
+#~ msgid "Right sidebar"
+#~ msgstr "右側邊欄"
+
+#~ msgid "It appears to the right of the page."
+#~ msgstr "顯示在網頁右方。"
+
+#~ msgid "marquee"
+#~ msgstr "跑馬燈"
 
 #~ msgid "Setting the FlexSlider images"
 #~ msgstr "設置FlexSlider圖片"
