@@ -1,6 +1,6 @@
 #KUAS_CSIE_Wordpress_Themes_TCC-Department
 2015年高應大資工系系網使用WordPress製作，大約是從2014年11月開始研究的，一開始採用的是CodeIgniter，但是對於雙語支持，有些地方一直用不好，像是以文章的雙語支持，於是就找到了WordPress的Polylang感覺還蠻適合的拿來用的，一方面是我有點不太想自己寫後台，畢竟我還這麼嫩，不太可能防住大部分的攻擊。
-
+![截圖](screenshot.png)
 ##版本記錄：
     + = 0.9 (2015-08-13) =
         - 改版內容：
